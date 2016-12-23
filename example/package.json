@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "ghpage": "npm run make -- -p && rm -rf ../docs/* && cp index.html ../docs/ && mv build ../docs/",
     "make": "./node_modules/.bin/webpack -d",
     "serve": "npm run make && ./node_modules/http-server/bin/http-server -o"
   },
