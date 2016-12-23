@@ -2,15 +2,25 @@ var React = require('react');
 
 module.exports = React.createClass({
 	initialize: function(node) {
-		if (node === null) return;
-		var app = this.props.src.embed(node, this.props.flags);
+		if (!node) return;
 
-		if (typeof this.props.ports !== 'undefined') {
-			this.props.ports(app.ports);
-		}
+		var App = this.props.src;
+
+		this._instance = new App({
+		  target: node,
+		  data: this.props,
+		});
 	},
 
-	shouldComponentUpdate: function(prevProps) {
+	componentWillUnmount: function() {
+		this._instance.teardown();
+	},
+
+	componentWillReceiveProps(nextProps) {
+		this._instance.set(nextProps);
+	},
+
+	shouldComponentUpdate: function() {
 		return false;
 	},
 

@@ -9,15 +9,15 @@ var config = {
 
   resolve: {
     modulesDirectories: ['node_modules'],
-    extensions: ['', '.js', '.elm']
+    extensions: ['', '.js', '.svelte']
   },
 
   module : {
     loaders : [
       {
-        test : /\.jsx?/,
+        test : /\.(svelte|jsx?)/,
         include : APP_DIR,
-        exclude: [/elm-stuff/, /node_modules/],
+        exclude: /node_modules/,
         loader : 'babel'
       },
       {
@@ -25,13 +25,13 @@ var config = {
         loader: "html"
       },
       {
-        test: /\.elm$/,
-        exclude: [/elm-stuff/, /node_modules/],
-        loader: 'elm-webpack'
+        test: /\.svelte$/,
+        exclude: /node_modules/,
+        loader: 'svelte-loader'
       }
     ],
 
-    noParse: /\.elm$/
+    noParse: /\.svelte$/
   },
   output: {
     path: BUILD_DIR,

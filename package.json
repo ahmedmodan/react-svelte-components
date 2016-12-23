@@ -1,29 +1,29 @@
 {
-  "name": "react-elm-components",
+  "name": "react-svelte-components",
   "version": "1.0.0",
-  "description": "Write React components in Elm",
+  "description": "Write Svelte components in Elm",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evancz/react-elm-components.git"
+    "url": "git+https://github.com/jihchi/react-svelte-components.git"
   },
   "peerDependencies": {
     "react": ">=0.14.0"
   },
-  "author": "Evan Czaplicki <info@elm-lang.org> (http://elm-lang.org/)",
+  "author": "Jih-Chi Lee <achi@987.tw> (https://987.tw/)",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/evancz/react-elm-components/issues"
+    "url": "https://github.com/jihchi/react-svelte-components/issues"
   },
-  "homepage": "https://github.com/evancz/react-elm",
+  "homepage": "https://github.com/jihchi/react-svelte-components",
   "directories": {
     "example": "example"
   },
   "keywords": [
     "react",
-    "elm"
+    "svelte"
   ]
 }
